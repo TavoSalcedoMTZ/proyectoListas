@@ -37,6 +37,16 @@ nodo::~nodo()
     std::cout << "Clase destruida" << std::endl;
 }
 
-nodo::nodo(int valor, nodo* nextNodo) :valor(valor), nextNodo(nextNodo) {
 
+
+
+nodo::nodo(int valor, nodo* nextNodo, nodo* prevnodo)
+{
+}
+
+nodo::nodo()
+{
+    valor = 0;
+    nextNodo = nullptr;
+    prevnodo = nullptr;
 }

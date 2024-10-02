@@ -3,7 +3,7 @@
 	class nodo
 	{
 	public:
-		nodo(int valor, nodo* nextNodo);
+		nodo(int valor, nodo* nextNodo, nodo* prevnodo);
 		nodo();
 		~nodo();
 

@@ -12,7 +12,7 @@ class List
 {
 public:
 	List();
-	List(nodo* root);
+	List(ListType type, nodo* root);
 
 	int GetValue(int pos);
 	void Push(int newValue);
@@ -26,11 +26,10 @@ public:
 
 
 
-	
-
+	ListType type;
 
 private:
-	ListType type;
+
 	nodo* root;
 	void setRoot(nodo*);
 	void setRoot(int _root);

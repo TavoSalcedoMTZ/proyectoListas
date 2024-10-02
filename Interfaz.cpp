@@ -54,6 +54,7 @@ void Interfaz::MainMenu()
 
 void Interfaz::SetList(ListType type)
 {
+    lista->type = type;
 }
 
 ListType Interfaz::GetList()
