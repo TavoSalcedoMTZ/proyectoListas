@@ -1,32 +1,24 @@
 #pragma once
 #include "List.h"
 
-
-class Interfaz
-{
+class Interfaz {
 public:
+    Interfaz();
+    ~Interfaz();
 
-	Interfaz();
-	~Interfaz();
+    void init();
+    void MainMenu();
 
+    void SetList(ListType _type);
+    ListType GetList();
 
-	void init();
-	void MainMenu();
-
-	void SetList(ListType _type);
-	ListType GetList();
-
-	void MenuList();
-
+    void MenuList();
 
 private:
-	List* lista;
+    List* lista;
 
-	void GetValueN();
-	void PushVal();
-	void ReadListN();
-	void ClearListN();
-
-
+    void GetValueN();
+    void PushVal();
+    void ReadListN();
+    void ClearListN();
 };
-

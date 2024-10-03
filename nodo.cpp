@@ -1,52 +1,48 @@
 #include "nodo.h"
 
-int nodo::GetValue()
-{
+nodo::nodo(int valor, nodo* nextNodo, nodo* prevnodo)
+    : valor(valor), nextNodo(nextNodo), prevnodo(prevnodo) {}
 
-    return valor;
-}
+nodo::nodo()
+    : valor(0), nextNodo(nullptr), prevnodo(nullptr) {}
 
-nodo* nodo::GetNext()
-{
-    return nextNodo;
-}
-
-void nodo::SetValue(int _value)
-{
-    valor = _value;
-}
-
-void nodo::SetPrevNodo(nodo* _prev)
-{
-    this->prevnodo = _prev;
-}
-
-void nodo::SetNextNodo(nodo* _next)
-{
-    if (nextNodo != NULL) {
-
-        nextNodo->SetNextNodo(_next);
-    }
-    else
-    {
-        this->nextNodo = _next;
-    }
-}
-nodo::~nodo()
-{
+nodo::~nodo() {
     std::cout << "Clase destruida" << std::endl;
 }
 
-
-
-
-nodo::nodo(int valor, nodo* nextNodo, nodo* prevnodo)
-{
+int nodo::GetValue() {
+    return valor;
 }
 
-nodo::nodo()
+nodo* nodo::GetNext() {
+    return nextNodo;
+}
+
+nodo* nodo::GetPrev() {
+    return prevnodo; 
+}
+
+void nodo::SetValue(int _value) {
+    valor = _value;
+}
+
+void nodo::SetNextNodo(nodo* _next) {
+    if (nextNodo != nullptr) { 
+        nextNodo->SetNextNodo(_next);
+    }
+    else {
+        this->nextNodo = _next; 
+    }
+}
+
+void nodo::SetNextNodoCircular(nodo* _next)
 {
-    valor = 0;
-    nextNodo = nullptr;
-    prevnodo = nullptr;
+    this->nextNodo = _next;
+
+}
+
+
+
+void nodo::SetPrevNodo(nodo* _prev) {
+    prevnodo = _prev; 
 }
