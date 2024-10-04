@@ -27,7 +27,7 @@ void Interfaz::MainMenu() {
     case 3: ReadListN(); break;
     case 4: ClearListN(); break;
     case 5: std::cout << "Saliendo" << std::endl; return;
-    default: std::cout << "Opción erronea." << std::endl; break;
+    default: std::cout << "Opcion erronea." << std::endl; break;
     }
 
     MainMenu();
@@ -38,7 +38,7 @@ void Interfaz::SetList(ListType type) {
 }
 
 ListType Interfaz::GetList() {
-    return lista->type; // Retorna el tipo de lista actual
+    return lista->type;
 }
 
 void Interfaz::MenuList() {
@@ -55,7 +55,7 @@ void Interfaz::MenuList() {
     case 2: SetList(LISTA_CIRCULAR_LIGADA); MainMenu(); break;
     case 3: SetList(LISTA_LINEAL_DLIGADA); MainMenu(); break;
     case 4: SetList(LISTA_CIRCULAR_DLIGADA); MainMenu(); break; 
-    default: std::cout << "Opción no válida." << std::endl; MenuList(); break;
+    default: std::cout << "Opción no valida." << std::endl; MenuList(); break;
     }
 }
 
