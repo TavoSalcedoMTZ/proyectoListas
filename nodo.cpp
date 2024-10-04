@@ -43,6 +43,12 @@ void nodo::SetNextNodoCircular(nodo* _next)
 
 
 
+
 void nodo::SetPrevNodo(nodo* _prev) {
     prevnodo = _prev; 
+}
+
+void nodo::ImprimirValor()
+{
+    std::cout << std::endl<<std::endl<< valor << std::endl;
 }

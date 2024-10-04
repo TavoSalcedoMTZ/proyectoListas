@@ -13,20 +13,27 @@ void Interfaz::init() {
 void Interfaz::MainMenu() {
     int opcion;
 
+
+
     std::cout << "Ingresa una opcion para continuar" << std::endl
         << "1- Realiza un Push" << std::endl
         << "2- Obtener el Valor" << std::endl
         << "3- Leer la lista" << std::endl
         << "4- Limpiar la lista" << std::endl
-        << "5- Salir" << std::endl;
-    std::cin >> opcion;
+        << "5- Agregar valor al principio a la lista" << std::endl
+        << "8- Avanzar el valor" << std::endl
+        << "6- Salir" << std::endl;
+
+    opcion = ManejoError();
 
     switch (opcion) {
     case 1: PushVal(); break;
     case 2: GetValueN(); break;
     case 3: ReadListN(); break;
     case 4: ClearListN(); break;
-    case 5: std::cout << "Saliendo" << std::endl; return;
+    case 5: PushFirstListVal(); break;
+    case 8:SearchOnListVal(); break;
+    case 6: std::cout << "Saliendo" << std::endl; return;
     default: std::cout << "Opcion erronea." << std::endl; break;
     }
 
@@ -48,14 +55,15 @@ void Interfaz::MenuList() {
         << "3- LISTA LINEAL DOBLEMENTE LIGADA" << std::endl
         << "4- LISTA CIRCULAR DOBLEMENTE LIGADA" << std::endl;
     std::cout << "Ingresa una opcion" << std::endl;
-    std::cin >> tipo_de_Lista;
+
+    tipo_de_Lista = ManejoError();
 
     switch (tipo_de_Lista) {
     case 1: SetList(LISTA_LINEAL_LIGADA); MainMenu(); break;
     case 2: SetList(LISTA_CIRCULAR_LIGADA); MainMenu(); break;
     case 3: SetList(LISTA_LINEAL_DLIGADA); MainMenu(); break;
     case 4: SetList(LISTA_CIRCULAR_DLIGADA); MainMenu(); break; 
-    default: std::cout << "Opción no valida." << std::endl; MenuList(); break;
+    default: std::cout << "Opcion no valida." << std::endl; MenuList(); break;
     }
 }
 
@@ -83,4 +91,36 @@ void Interfaz::ReadListN() {
 void Interfaz::ClearListN() {
     lista->ClearList();
     std::cout << "Lista limpiada." << std::endl;
+}
+
+
+void Interfaz::PushFirstListVal()
+{
+    int newValue;
+    std::cout << "Ingresa un valor para realizar el push al final de la lista" << std::endl;
+    std::cin >> newValue;
+    lista->PushFirstList(newValue);
+}
+
+void Interfaz::SearchOnListVal()
+{
+    lista-> SearchOnList();
+}
+
+int Interfaz::ManejoError()
+{
+    
+    int numero;
+    std::cin >> numero;
+    while (true) {
+        if (std::cin.fail()) {
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cout << "Error al ingresar" << std::endl;
+        }
+        else {
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            return numero;
+        }
+    }
 }

@@ -19,6 +19,9 @@ private:
 
     void GetValueN();
     void PushVal();
-    void ReadListN();
-    void ClearListN();
+        void ReadListN();
+        void ClearListN();
+    void PushFirstListVal();
+    void SearchOnListVal();
+    int ManejoError();
 };

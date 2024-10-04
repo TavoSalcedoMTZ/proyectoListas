@@ -17,9 +17,9 @@ public:
     void Push(int newValue);
     void ReadList();
     void ClearList();
-
+    void PushFirstList(int newValue);
     ListType type;
-
+    void SearchOnList();
 private:
     nodo* root;
     void setRoot(nodo*);
