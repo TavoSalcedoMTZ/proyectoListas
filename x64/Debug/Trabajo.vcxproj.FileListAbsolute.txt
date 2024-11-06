@@ -1,2 +1,3 @@
 C:\Users\Alumnos\Desktop\Trabajo\x64\Debug\Trabajo.exe
 C:\Users\Alumnos\Documents\Trabajo-20240927T180557Z-001\Trabajo\x64\Debug\Trabajo.exe
+C:\Users\Alumnos\Desktop\proyectoListas\x64\Debug\Trabajo.exe

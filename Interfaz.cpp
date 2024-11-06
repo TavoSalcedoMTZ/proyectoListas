@@ -21,8 +21,12 @@ void Interfaz::MainMenu() {
         << "3- Leer la lista" << std::endl
         << "4- Limpiar la lista" << std::endl
         << "5- Agregar valor al principio a la lista" << std::endl
-        << "8- Avanzar el valor" << std::endl
-        << "6- Salir" << std::endl;
+        << "6- Avanzar el valor" << std::endl
+        << "7- Llena la Lista de manera Aleatoria" << std::endl
+        << "8- ORDENAR LISTA BUBBLESORT" << std::endl
+        << "9- ORDENAR LISTA SELECTION" << std::endl
+        << "14- ORDENAR LISTA SELECTION" << std::endl
+        << "10- Salir" << std::endl;
 
     opcion = ManejoError();
 
@@ -32,8 +36,13 @@ void Interfaz::MainMenu() {
     case 3: ReadListN(); break;
     case 4: ClearListN(); break;
     case 5: PushFirstListVal(); break;
-    case 8:SearchOnListVal(); break;
-    case 6: std::cout << "Saliendo" << std::endl; return;
+    case 6:SearchOnListVal(); break;
+    case 7:FillListValue(); break;
+    case 8:ActiveBubbleSort(); break;
+    case 9:ActiveSelectionSort(); break;
+    case 14:ActiveMergeSort(); break;
+    case 10: std::cout << "Saliendo" << std::endl; return;
+
     default: std::cout << "Opcion erronea." << std::endl; break;
     }
 
@@ -123,4 +132,25 @@ int Interfaz::ManejoError()
             return numero;
         }
     }
+}
+
+void Interfaz::FillListValue()
+{
+    lista->FillList();
+}
+
+void Interfaz::ActiveBubbleSort()
+{
+    lista->BubbleSort();
+}
+
+void Interfaz::ActiveSelectionSort()
+{
+    lista->SelectionSort();
+}
+
+void Interfaz::ActiveMergeSort()
+{
+
+    lista->MergeSort();
 }

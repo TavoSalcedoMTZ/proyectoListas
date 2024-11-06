@@ -1,5 +1,7 @@
 #pragma once
 #include "nodo.h"
+#include <cstdlib>
+#include <ctime>
 
 enum ListType {
     LISTA_LINEAL_LIGADA = 0,
@@ -20,6 +22,13 @@ public:
     void PushFirstList(int newValue);
     ListType type;
     void SearchOnList();
+    void FillList();
+
+    void BubbleSort();
+    void SelectionSort();
+
+    void MergeSort();
+
 private:
     nodo* root;
     void setRoot(nodo*);

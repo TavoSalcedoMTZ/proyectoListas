@@ -24,4 +24,10 @@ private:
     void PushFirstListVal();
     void SearchOnListVal();
     int ManejoError();
+    void FillListValue();
+    void ActiveBubbleSort();
+    void ActiveSelectionSort();
+
+    void ActiveMergeSort();
+
 };
