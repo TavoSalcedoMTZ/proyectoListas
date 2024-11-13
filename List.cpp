@@ -227,10 +227,11 @@ void List::FillList() {
     }
 }
 
-
-
 void List::BubbleSort() {
     if (root == nullptr) return;
+
+
+    auto inicio = std::chrono::high_resolution_clock::now();
 
     bool cambio;
     nodo* current;
@@ -271,11 +272,15 @@ void List::BubbleSort() {
 
         ultimobuscado = current;
     } while (cambio);
+    auto fin = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> duracion = fin - inicio;
+    std::cout << std::endl << std::endl << duracion.count() << std::endl;
 }
+
 
 void List::SelectionSort() {
     if (root == nullptr) return;
-
+    auto inicio = std::chrono::high_resolution_clock::now();
     nodo* start = root;
 
     if (type == LISTA_LINEAL_LIGADA || type == LISTA_LINEAL_DLIGADA) {
@@ -320,10 +325,16 @@ void List::SelectionSort() {
             start = start->GetNext();
         } while (start != root);
     }
+
+
+    auto fin = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> duracion = fin - inicio;
+    std::cout << std::endl << std::endl << duracion.count() << std::endl;
 }
 
 void List::InsertionSort() {
     if (root == nullptr || root->GetNext() == nullptr) return;
+    auto inicio = std::chrono::high_resolution_clock::now();
 
     nodo* sorted = nullptr;
     nodo* current = root;
@@ -361,10 +372,15 @@ void List::InsertionSort() {
             last->SetNextNodo(sorted);
         }
     }
+
+    auto fin = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> duracion = fin - inicio;
+    std::cout << std::endl << std::endl << duracion.count() << std::endl;
 }
 
 void List::MergeSort() {
     if (root == nullptr) return;
+    auto inicio = std::chrono::high_resolution_clock::now();
 
     if (type == LISTA_CIRCULAR_LIGADA || type == LISTA_CIRCULAR_DLIGADA) {
         nodo* lastNode = root;
@@ -410,6 +426,11 @@ void List::MergeSort() {
             root->SetPrevNodo(lastNode);
         }
     }
+
+
+    auto fin = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> duracion = fin - inicio;
+    std::cout << std::endl << std::endl << duracion.count() << std::endl;
 }
 
 nodo* List::mergeSort(nodo* principal) {
@@ -540,6 +561,7 @@ void List::QuickSort() {
 
     //Si la lista esta vacia no hace nada
     if (root == nullptr) return;
+    auto inicio = std::chrono::high_resolution_clock::now();
 
    
     //Si la lista es circular se desconecta la lista, para que no explote this shit, si la lista es doblemente ligada se desconecta el puntero anterior
@@ -575,6 +597,11 @@ void List::QuickSort() {
             root->SetPrevNodo(ultimoNodo);
         }
     }
+
+
+    auto fin = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> duracion = fin - inicio;
+    std::cout << std::endl << std::endl << duracion.count() << std::endl;
 }
 
 nodo* List::quickSort(nodo* inicio, nodo* fin) {

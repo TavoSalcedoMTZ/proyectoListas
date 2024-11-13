@@ -2,7 +2,7 @@
 #include "nodo.h"
 #include <cstdlib>
 #include <ctime>
-
+#include <chrono>
 enum ListType {
     LISTA_LINEAL_LIGADA = 0,
     LISTA_CIRCULAR_LIGADA = 0b01,
