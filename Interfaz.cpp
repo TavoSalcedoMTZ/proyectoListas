@@ -23,9 +23,7 @@ void Interfaz::MainMenu() {
         << "5- Agregar valor al principio a la lista" << std::endl
         << "6- Avanzar el valor" << std::endl
         << "7- Llena la Lista de manera Aleatoria" << std::endl
-        << "8- ORDENAR LISTA BUBBLESORT" << std::endl
-        << "9- ORDENAR LISTA SELECTION" << std::endl
-        << "14- ORDENAR LISTA SELECTION" << std::endl
+        << "8- Ordena La Lista" << std::endl
         << "10- Salir" << std::endl;
 
     opcion = ManejoError();
@@ -38,9 +36,7 @@ void Interfaz::MainMenu() {
     case 5: PushFirstListVal(); break;
     case 6:SearchOnListVal(); break;
     case 7:FillListValue(); break;
-    case 8:ActiveBubbleSort(); break;
-    case 9:ActiveSelectionSort(); break;
-    case 14:ActiveMergeSort(); break;
+    case 8:MenuAlgoritmo(); break;
     case 10: std::cout << "Saliendo" << std::endl; return;
 
     default: std::cout << "Opcion erronea." << std::endl; break;
@@ -48,6 +44,35 @@ void Interfaz::MainMenu() {
 
     MainMenu();
 }
+
+void Interfaz::MenuAlgoritmo()
+{
+    int opcion;
+
+    std::cout << "Ingresa una opcion para continuar" << std::endl
+        << "1- Realiza Ordenamiento por Algoritmo BubbleSort" << std::endl
+        << "2- Realiza Ordenamiento por Algoritmo SelectionSort" << std::endl
+        << "3- Realiza Ordenamiento por Algoritmo InsertionSort" << std::endl
+        << "4- Realiza Ordenamiento por Algoritmo MergeSort" << std::endl
+        << "5- Realiza Ordenamiento por Algoritmo QuickSort" << std::endl
+        << "10- Salir" << std::endl;
+        opcion = ManejoError();
+
+        switch (opcion) {
+        case 1: ActiveBubbleSort(); break;
+        case 2: ActiveSelectionSort(); break;
+        case 3: ActiveInsertionSort(); break;
+        case 4: ActiveMergeSort(); break;
+        case 5: ActiveQuickSort(); break;
+        case 10: std::cout << "Saliendo" << std::endl; MainMenu();
+        default: std::cout << "Opcion erronea." << std::endl; break;
+        }
+
+
+}
+
+
+
 
 void Interfaz::SetList(ListType type) {
     lista->type = type;
@@ -149,8 +174,18 @@ void Interfaz::ActiveSelectionSort()
     lista->SelectionSort();
 }
 
+void Interfaz::ActiveInsertionSort()
+{
+    lista->InsertionSort();
+}
+
 void Interfaz::ActiveMergeSort()
 {
 
     lista->MergeSort();
+}
+
+void Interfaz::ActiveQuickSort()
+{
+    lista->QuickSort();
 }

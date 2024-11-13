@@ -23,11 +23,24 @@ public:
     ListType type;
     void SearchOnList();
     void FillList();
-
     void BubbleSort();
     void SelectionSort();
-
+    void InsertionSort();
     void MergeSort();
+
+    nodo* mergeSort(nodo* principal);
+
+    nodo* findMiddle(nodo* principal);
+
+    nodo* merge(nodo* izquierda, nodo* derecha);
+
+    void QuickSort();
+
+    nodo* quickSort(nodo* inicio, nodo* fin);
+
+    nodo* particionar(nodo* inicio, nodo* fin);
+
+    nodo* obtenerUltimoNodo(nodo* nodo);
 
 private:
     nodo* root;

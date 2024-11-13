@@ -8,6 +8,7 @@ public:
 
     void init();
     void MainMenu();
+    void MenuAlgoritmo();
 
     void SetList(ListType _type);
     ListType GetList();
@@ -27,7 +28,8 @@ private:
     void FillListValue();
     void ActiveBubbleSort();
     void ActiveSelectionSort();
+    void ActiveInsertionSort();
 
     void ActiveMergeSort();
-
+    void ActiveQuickSort();
 };

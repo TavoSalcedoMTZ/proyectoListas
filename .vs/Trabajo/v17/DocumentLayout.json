@@ -3,32 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\sdedf\\OneDrive\\Documentos\\GitHub\\proyectoListas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{10A025CE-48F5-4CD3-87CA-CDBDDC46E025}|Trabajo.vcxproj|C:\\Users\\sdedf\\OneDrive\\Documentos\\GitHub\\proyectoListas\\nodo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{10A025CE-48F5-4CD3-87CA-CDBDDC46E025}|Trabajo.vcxproj|solutionrelative:nodo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{10A025CE-48F5-4CD3-87CA-CDBDDC46E025}|Trabajo.vcxproj|C:\\Users\\sdedf\\OneDrive\\Documentos\\GitHub\\proyectoListas\\Interfaz.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{10A025CE-48F5-4CD3-87CA-CDBDDC46E025}|Trabajo.vcxproj|solutionrelative:Interfaz.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10A025CE-48F5-4CD3-87CA-CDBDDC46E025}|Trabajo.vcxproj|C:\\Users\\sdedf\\OneDrive\\Documentos\\GitHub\\proyectoListas\\List.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{10A025CE-48F5-4CD3-87CA-CDBDDC46E025}|Trabajo.vcxproj|solutionrelative:List.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10A025CE-48F5-4CD3-87CA-CDBDDC46E025}|Trabajo.vcxproj|C:\\Users\\sdedf\\OneDrive\\Documentos\\GitHub\\proyectoListas\\nodo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{10A025CE-48F5-4CD3-87CA-CDBDDC46E025}|Trabajo.vcxproj|solutionrelative:nodo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10A025CE-48F5-4CD3-87CA-CDBDDC46E025}|Trabajo.vcxproj|C:\\Users\\sdedf\\OneDrive\\Documentos\\GitHub\\proyectoListas\\source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{10A025CE-48F5-4CD3-87CA-CDBDDC46E025}|Trabajo.vcxproj|solutionrelative:source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{10A025CE-48F5-4CD3-87CA-CDBDDC46E025}|Trabajo.vcxproj|C:\\Users\\sdedf\\OneDrive\\Documentos\\GitHub\\proyectoListas\\Interfaz.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10A025CE-48F5-4CD3-87CA-CDBDDC46E025}|Trabajo.vcxproj|solutionrelative:Interfaz.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10A025CE-48F5-4CD3-87CA-CDBDDC46E025}|Trabajo.vcxproj|C:\\Users\\sdedf\\OneDrive\\Documentos\\GitHub\\proyectoListas\\List.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{10A025CE-48F5-4CD3-87CA-CDBDDC46E025}|Trabajo.vcxproj|solutionrelative:List.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10A025CE-48F5-4CD3-87CA-CDBDDC46E025}|Trabajo.vcxproj|C:\\Users\\sdedf\\OneDrive\\Documentos\\GitHub\\proyectoListas\\Interfaz.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{10A025CE-48F5-4CD3-87CA-CDBDDC46E025}|Trabajo.vcxproj|solutionrelative:Interfaz.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{10A025CE-48F5-4CD3-87CA-CDBDDC46E025}|Trabajo.vcxproj|C:\\Users\\sdedf\\OneDrive\\Documentos\\GitHub\\proyectoListas\\nodo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10A025CE-48F5-4CD3-87CA-CDBDDC46E025}|Trabajo.vcxproj|solutionrelative:nodo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10A025CE-48F5-4CD3-87CA-CDBDDC46E025}|Trabajo.vcxproj|C:\\Users\\sdedf\\OneDrive\\Documentos\\GitHub\\proyectoListas\\List.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10A025CE-48F5-4CD3-87CA-CDBDDC46E025}|Trabajo.vcxproj|solutionrelative:List.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10A025CE-48F5-4CD3-87CA-CDBDDC46E025}|Trabajo.vcxproj|C:\\Users\\sdedf\\OneDrive\\Documentos\\GitHub\\proyectoListas\\nodo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10A025CE-48F5-4CD3-87CA-CDBDDC46E025}|Trabajo.vcxproj|solutionrelative:nodo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10A025CE-48F5-4CD3-87CA-CDBDDC46E025}|Trabajo.vcxproj|C:\\Users\\sdedf\\OneDrive\\Documentos\\GitHub\\proyectoListas\\source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{10A025CE-48F5-4CD3-87CA-CDBDDC46E025}|Trabajo.vcxproj|solutionrelative:source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,17 +38,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "nodo.h",
               "DocumentMoniker": "C:\\Users\\sdedf\\OneDrive\\Documentos\\GitHub\\proyectoListas\\nodo.h",
               "RelativeDocumentMoniker": "nodo.h",
               "ToolTip": "C:\\Users\\sdedf\\OneDrive\\Documentos\\GitHub\\proyectoListas\\nodo.h",
               "RelativeToolTip": "nodo.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAZAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-09-27T18:11:53.186Z",
               "IsPinned": true,
@@ -56,13 +56,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "List.h",
               "DocumentMoniker": "C:\\Users\\sdedf\\OneDrive\\Documentos\\GitHub\\proyectoListas\\List.h",
               "RelativeDocumentMoniker": "List.h",
               "ToolTip": "C:\\Users\\sdedf\\OneDrive\\Documentos\\GitHub\\proyectoListas\\List.h",
               "RelativeToolTip": "List.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAWAAAA",
+              "ViewState": "AgIAABQAAAAAAAAAAIAwwCMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-10-03T00:48:20.298Z",
               "IsPinned": true,
@@ -70,13 +70,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Interfaz.cpp",
               "DocumentMoniker": "C:\\Users\\sdedf\\OneDrive\\Documentos\\GitHub\\proyectoListas\\Interfaz.cpp",
               "RelativeDocumentMoniker": "Interfaz.cpp",
               "ToolTip": "C:\\Users\\sdedf\\OneDrive\\Documentos\\GitHub\\proyectoListas\\Interfaz.cpp",
               "RelativeToolTip": "Interfaz.cpp",
-              "ViewState": "AQIAAHUAAAAAAAAAAAAAAJIAAAABAAAA",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAABkAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-04T18:17:31.189Z",
               "EditorCaption": ""
@@ -89,46 +89,46 @@
               "RelativeDocumentMoniker": "nodo.cpp",
               "ToolTip": "C:\\Users\\sdedf\\OneDrive\\Documentos\\GitHub\\proyectoListas\\nodo.cpp",
               "RelativeToolTip": "nodo.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADUAAAABAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-09-27T18:09:45.416Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "source.cpp",
               "DocumentMoniker": "C:\\Users\\sdedf\\OneDrive\\Documentos\\GitHub\\proyectoListas\\source.cpp",
               "RelativeDocumentMoniker": "source.cpp",
               "ToolTip": "C:\\Users\\sdedf\\OneDrive\\Documentos\\GitHub\\proyectoListas\\source.cpp",
               "RelativeToolTip": "source.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-09-27T18:09:45.427Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "List.cpp",
               "DocumentMoniker": "C:\\Users\\sdedf\\OneDrive\\Documentos\\GitHub\\proyectoListas\\List.cpp",
               "RelativeDocumentMoniker": "List.cpp",
               "ToolTip": "C:\\Users\\sdedf\\OneDrive\\Documentos\\GitHub\\proyectoListas\\List.cpp",
               "RelativeToolTip": "List.cpp",
-              "ViewState": "AQIAAOoAAAAAAAAAAAAUwDkBAAAlAAAA",
+              "ViewState": "AgIAAO8BAAAAAAAAAAAwwDMCAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-09-27T18:09:45.448Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "Interfaz.h",
               "DocumentMoniker": "C:\\Users\\sdedf\\OneDrive\\Documentos\\GitHub\\proyectoListas\\Interfaz.h",
               "RelativeDocumentMoniker": "Interfaz.h",
               "ToolTip": "C:\\Users\\sdedf\\OneDrive\\Documentos\\GitHub\\proyectoListas\\Interfaz.h",
               "RelativeToolTip": "Interfaz.h",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABwAAAAcAAAA",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-09-27T18:09:45.492Z",
               "EditorCaption": ""

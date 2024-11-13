@@ -1,4 +1,6 @@
 ﻿  Interfaz.cpp
+  List.cpp
+C:\Users\sdedf\OneDrive\Documentos\GitHub\proyectoListas\List.cpp(222,25): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
   source.cpp
   Generando código...
   Trabajo.vcxproj -> C:\Users\sdedf\OneDrive\Documentos\GitHub\proyectoListas\x64\Debug\Trabajo.exe

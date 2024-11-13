@@ -109,7 +109,6 @@ void List::ReadList() {
             } while (NodeTemp != root);
         }
     }
-
     std::cout << std::endl;
 }
 
@@ -135,6 +134,7 @@ void List::ClearList() {
         }
     }
 }
+
 void List::PushFirstList(int newValue) {
     nodo* Node = new nodo(newValue);
 
@@ -153,12 +153,11 @@ void List::PushFirstList(int newValue) {
             while (TempNode->GetNext() != root) {
                 TempNode = TempNode->GetNext();
             }
-            TempNode->SetNextNodoCircular(Node); 
-            Node->SetNextNodoCircular(root); 
+            TempNode->SetNextNodoCircular(Node);
         }
         else {
             root = Node;
-            Node->SetNextNodo(root); 
+            Node->SetNextNodo(root);
         }
         break;
 
@@ -180,8 +179,8 @@ void List::PushFirstList(int newValue) {
         }
         else {
             root = Node;
-            Node->SetNextNodoCircular(root); 
-            Node->SetPrevNodo(root); 
+            Node->SetNextNodoCircular(root);
+            Node->SetPrevNodo(root);
         }
         break;
     }
@@ -190,54 +189,47 @@ void List::PushFirstList(int newValue) {
 void List::SearchOnList() {
     char c = 0;
     nodo* Current = root;
-        Current->ImprimirValor();
- 
+    Current->ImprimirValor();
+
     do {
         std::cout << std::endl << "Para avanzar presiona la letra 'D', para retroceder presiona la letra 'A'." << std::endl << "Para salir presiona 'x'." << std::endl;
         std::cin >> c;
 
         if (c == 'd' || c == 'D') {
-                Current = Current->GetNext();
-                Current->ImprimirValor();
-            
+            Current = Current->GetNext();
+            Current->ImprimirValor();
         }
         else if (c == 'a' || c == 'A') {
-                Current = Current->GetPrev();
-                Current->ImprimirValor();
-            
-   
+            Current = Current->GetPrev();
+            Current->ImprimirValor();
         }
 
     } while (c != 'x' && c != 'X');
 }
 
-void List::FillList()
-{
+void List::FillList() {
+    int cantidad, LimiteInf, LimiteSup;
+    std::cout << "Ingresa Cantidad de Valores" << std::endl;
+    std::cin >> cantidad;
 
-        int cantidad, LimiteInf, LimiteSup;
-        std::cout << "Ingresa Cantidad de Valores" << std::endl;
-        std::cin >> cantidad;
-        
-        std::cout << "Ingresa Limite Inferior" << std::endl;
-        std::cin >> LimiteInf;
+    std::cout << "Ingresa Limite Inferior" << std::endl;
+    std::cin >> LimiteInf;
 
-        std::cout << "Ingresa Limite Superior" << std::endl;
-        std::cin >> LimiteSup;
-        std::cout << std:: endl;
+    std::cout << "Ingresa Limite Superior" << std::endl;
+    std::cin >> LimiteSup;
+    std::cout << std::endl;
 
-        std::srand(std::time(0));
+    std::srand(std::time(0));
 
-        for (int i = 0; i < cantidad; ++i) {
-
-            int valores=LimiteInf+std::rand()%(LimiteSup-LimiteInf+1);
-
-            Push(valores);
-        }
-    
+    for (int i = 0; i < cantidad; ++i) {
+        int valores = LimiteInf + std::rand() % (LimiteSup - LimiteInf + 1);
+        Push(valores);
+    }
 }
 
-void List::BubbleSort()
-{
+
+
+void List::BubbleSort() {
     if (root == nullptr) return;
 
     bool cambio;
@@ -249,12 +241,10 @@ void List::BubbleSort()
         current = root;
 
         if (type == LISTA_LINEAL_LIGADA || type == LISTA_LINEAL_DLIGADA) {
-
             while (current->GetNext() != ultimobuscado) {
                 nodo* nextNode = current->GetNext();
 
                 if (current->GetValue() > nextNode->GetValue()) {
-
                     int temp = current->GetValue();
                     current->SetValue(nextNode->GetValue());
                     nextNode->SetValue(temp);
@@ -265,12 +255,10 @@ void List::BubbleSort()
             }
         }
         else if (type == LISTA_CIRCULAR_LIGADA || type == LISTA_CIRCULAR_DLIGADA) {
-
             do {
                 nodo* nextNode = current->GetNext();
 
                 if (current->GetValue() > nextNode->GetValue()) {
-
                     int temp = current->GetValue();
                     current->SetValue(nextNode->GetValue());
                     nextNode->SetValue(temp);
@@ -279,7 +267,6 @@ void List::BubbleSort()
                 }
                 current = current->GetNext();
             } while (current != root && current->GetNext() != ultimobuscado);
-
         }
 
         ultimobuscado = current;
@@ -290,7 +277,6 @@ void List::SelectionSort() {
     if (root == nullptr) return;
 
     nodo* start = root;
-
 
     if (type == LISTA_LINEAL_LIGADA || type == LISTA_LINEAL_DLIGADA) {
         while (start && start->GetNext() != nullptr) {
@@ -304,7 +290,6 @@ void List::SelectionSort() {
                 current = current->GetNext();
             }
 
-
             if (menor != start) {
                 int temp = start->GetValue();
                 start->SetValue(menor->GetValue());
@@ -314,15 +299,11 @@ void List::SelectionSort() {
             start = start->GetNext();
         }
     }
-   
     else if (type == LISTA_CIRCULAR_LIGADA || type == LISTA_CIRCULAR_DLIGADA) {
-       
-
         do {
             nodo* menor = start;
             nodo* current = start->GetNext();
 
-       
             do {
                 if (current->GetValue() < menor->GetValue()) {
                     menor = current;
@@ -337,45 +318,326 @@ void List::SelectionSort() {
             }
 
             start = start->GetNext();
-        } while (start != root); 
+        } while (start != root);
     }
 }
 
-void List::MergeSort()
-{
-    if (root == nullptr) return;
-        
+void List::InsertionSort() {
+    if (root == nullptr || root->GetNext() == nullptr) return;
+
+    nodo* sorted = nullptr;
     nodo* current = root;
-    nodo* NodeTemp = root;
-    int contador = 1;
 
-        while (NodeTemp) {
-            contador++;
-            NodeTemp = NodeTemp->GetNext();
+    while (current != nullptr) {
+        nodo* next = current->GetNext();
+        current->SetNextNodo(nullptr);
+
+        if (sorted == nullptr || current->GetValue() < sorted->GetValue()) {
+            current->SetNextNodo(sorted);
+            sorted = current;
         }
-
-        nodo* Temp = root;
-        int index=1;
-        while (current!=nullptr) {
-            index ++;
-            current = current->GetNext();
-
-            if (index == (contador * 0.5)) {
-
-                Temp = current->GetNext();
-                Temp->GetNext() = nullptr;
+        else {
+            nodo* temp = sorted;
+            while (temp->GetNext() != nullptr && temp->GetNext()->GetValue() < current->GetValue()) {
+                temp = temp->GetNext();
             }
-           
-           
+            current->SetNextNodo(temp->GetNext());
+            temp->SetNextNodo(current);
+        }
 
+        current = next;
+    }
+
+    root = sorted;
+
+    if (type == LISTA_CIRCULAR_LIGADA || type == LISTA_CIRCULAR_DLIGADA) {
+        nodo* last = sorted;
+        while (last->GetNext() != nullptr) {
+            last = last->GetNext();
+        }
+        last->SetNextNodo(sorted);
+        if (type == LISTA_CIRCULAR_DLIGADA) {
+            sorted->SetPrevNodo(last);
+            last->SetNextNodo(sorted);
+        }
+    }
+}
+
+void List::MergeSort() {
+    if (root == nullptr) return;
+
+    if (type == LISTA_CIRCULAR_LIGADA || type == LISTA_CIRCULAR_DLIGADA) {
+        nodo* lastNode = root;
+
+        while (lastNode->GetNext() != root) {
+            lastNode = lastNode->GetNext();
         }
 
 
+        if (type == LISTA_CIRCULAR_DLIGADA) {
+            lastNode->SetNextNodoNull();
+            root->SetPrevNodo(nullptr);
+        }
+        else {
+            lastNode->SetNextNodoNull();
+        }
 
-   
+
+        if (type == LISTA_CIRCULAR_LIGADA) {
+            type = LISTA_LINEAL_LIGADA;
+        }
+        else if (type == LISTA_CIRCULAR_DLIGADA) {
+            type = LISTA_LINEAL_DLIGADA;
+        }
+    }
 
 
+    root = mergeSort(root);
+
+
+    if (type == LISTA_CIRCULAR_LIGADA || type == LISTA_CIRCULAR_DLIGADA) {
+        nodo* lastNode = root;
+        while (lastNode->GetNext() != nullptr) {
+            lastNode = lastNode->GetNext();
+        }
+
+
+        if (type == LISTA_CIRCULAR_LIGADA) {
+            lastNode->SetNextNodoCircular(root);
+        }
+        else if (type == LISTA_CIRCULAR_DLIGADA) {
+            lastNode->SetNextNodoCircular(root);
+            root->SetPrevNodo(lastNode);
+        }
+    }
+}
+
+nodo* List::mergeSort(nodo* principal) {
+    if (principal == nullptr || principal->GetNext() == nullptr) {
+        return principal;
+    }
+
+    nodo* mid = findMiddle(principal);
+    nodo* nextOfMid = mid->GetNext();
+
+    if (type == LISTA_CIRCULAR_LIGADA || type == LISTA_CIRCULAR_DLIGADA) {
+        mid->SetNextNodoNull();
+    }
+    else {
+        mid->SetNextNodoNull();
+    }
+
+    if (type == LISTA_CIRCULAR_DLIGADA) {
+        nodo* last = principal;
+
+        do {
+            last = last->GetNext();
+
+        } while (last->GetNext() == principal);
+        last->SetNextNodoNull();
+
+        nextOfMid->SetPrevNodo(nullptr);
+    }
+
+    nodo* izquierda = mergeSort(principal);
+    nodo* derecha = mergeSort(nextOfMid);
+
+    return merge(izquierda, derecha);
+}
+
+nodo* List::findMiddle(nodo* principal) {
+    if (!principal) return nullptr;
+
+    nodo* primer = principal;
+    nodo* segundo = principal->GetNext();
+
+    while (segundo != nullptr && segundo->GetNext() != nullptr && segundo != primer && segundo->GetNext() != primer) {
+        primer = primer->GetNext();
+        segundo = segundo->GetNext()->GetNext();
+    }
+
+
+
+    return primer;
+}
+
+nodo* List::merge(nodo* izquierda, nodo* derecha) {
+    if (!izquierda) return derecha;
+    if (!derecha) return izquierda;
+
+    nodo* result = nullptr;
+
+    if (izquierda->GetValue() <= derecha->GetValue()) {
+        result = izquierda;
+        izquierda = izquierda->GetNext();
+    }
+    else {
+        result = derecha;
+        derecha = derecha->GetNext();
+    }
+
+    nodo* current = result;
+
+    while (izquierda && derecha) {
+        if (izquierda->GetValue() <= derecha->GetValue()) {
+            current->SetNextNodoCircular(izquierda);
+            if (type == LISTA_LINEAL_DLIGADA || type == LISTA_CIRCULAR_DLIGADA) {
+                izquierda->SetPrevNodo(current);
+            }
+            izquierda = izquierda->GetNext();
+        }
+        else {
+            current->SetNextNodoCircular(derecha);
+            if (type == LISTA_LINEAL_DLIGADA || type == LISTA_CIRCULAR_DLIGADA) {
+                derecha->SetPrevNodo(current);
+            }
+            derecha = derecha->GetNext();
+        }
+        current = current->GetNext();
+    }
+
+    while (izquierda) {
+        current->SetNextNodoCircular(izquierda);
+        if (type == LISTA_LINEAL_DLIGADA || type == LISTA_CIRCULAR_DLIGADA) {
+            izquierda->SetPrevNodo(current);
+        }
+        izquierda = izquierda->GetNext();
+        current = current->GetNext();
+    }
+
+    while (derecha) {
+        current->SetNextNodoCircular(derecha);
+        if (type == LISTA_LINEAL_DLIGADA || type == LISTA_CIRCULAR_DLIGADA) {
+            derecha->SetPrevNodo(current);
+        }
+        derecha = derecha->GetNext();
+        current = current->GetNext();
+    }
+
+    if (type == LISTA_CIRCULAR_DLIGADA) {
+        nodo* lastNode = current;
+        while (lastNode->GetNext() != nullptr && lastNode->GetNext() != result) {
+            lastNode = lastNode->GetNext();
+        }
+        lastNode->SetNextNodoCircular(result);
+        result->SetPrevNodo(lastNode);
+    }
+
+    if (type == LISTA_CIRCULAR_LIGADA) {
+        nodo* lastNode = current;
+        while (lastNode->GetNext() != nullptr && lastNode->GetNext() != result) {
+            lastNode = lastNode->GetNext();
+        }
+        lastNode->SetNextNodoCircular(result);
+    }
+
+    return result;
 }
 
 
 
+void List::QuickSort() {
+
+    //Si la lista esta vacia no hace nada
+    if (root == nullptr) return;
+
+   
+    //Si la lista es circular se desconecta la lista, para que no explote this shit, si la lista es doblemente ligada se desconecta el puntero anterior
+    if (type == LISTA_CIRCULAR_LIGADA || type == LISTA_CIRCULAR_DLIGADA) {
+        nodo* ultimoNodo = root;
+        while (ultimoNodo->GetNext() != root) {
+            ultimoNodo = ultimoNodo->GetNext();
+        }
+        if (type == LISTA_CIRCULAR_DLIGADA) {
+            ultimoNodo->SetNextNodoNull();
+            root->SetPrevNodo(nullptr);
+        }
+        else {
+            ultimoNodo->SetNextNodoNull();
+        }
+    }
+
+    //Llamamos a la funcion auxiliar QuickSort, que funciona de manera recursiva para ordenar los nodos de la lista  le estamos dando el principio y el final de la lista
+    root = quickSort(root, nullptr); 
+
+
+    //Reconectamos la lista si era circular, despues de que ya se ordenaron todos los nodos, se recorre la lista para encontrar el ultimo nodo y se enlaza con el primero para volverla circular denuevo
+    if (type == LISTA_CIRCULAR_LIGADA || type == LISTA_CIRCULAR_DLIGADA) {
+        nodo* ultimoNodo = root;
+        while (ultimoNodo->GetNext() != nullptr) {
+            ultimoNodo = ultimoNodo->GetNext();
+        }
+        if (type == LISTA_CIRCULAR_LIGADA) {
+            ultimoNodo->SetNextNodoCircular(root);
+        }
+        else if (type == LISTA_CIRCULAR_DLIGADA) {
+            ultimoNodo->SetNextNodoCircular(root);
+            root->SetPrevNodo(ultimoNodo);
+        }
+    }
+}
+
+nodo* List::quickSort(nodo* inicio, nodo* fin) {
+    //Si el nodo de inicio es igual al nodo final o el primer nodo es nulo devuelve el nodo inicial
+    if (inicio == fin || inicio == nullptr) return inicio;
+
+
+    //Particionamos la lista y asignamos a la funcion un pivotm que reorganiza los nodos de la lista para que los valores menores al pivote esten antes del el y los mayores despues
+    nodo* pivote = particionar(inicio, fin);
+
+
+
+    //Hacemos recursion sobre las dos mitades, se hace la llamda para ordenar la parte de la lista antes del pivote, primero se recorrer hasta el notodo anterior al pivote se corta la lista y se llama nuevamente al quicksort, para una sublista
+    if (pivote != inicio) {
+        nodo* temp = inicio;
+        while (temp->GetNext() != pivote) {
+            temp = temp->GetNext();
+        }
+        temp->SetNextNodoNull();
+        inicio = quickSort(inicio, temp);
+        temp = obtenerUltimoNodo(inicio);
+        temp->SetNextNodoCircular(pivote);
+    }
+
+
+    //finalmente se llama recurisvamente la parte posterior al pivote
+    pivote->SetNextNodoCircular(quickSort(pivote->GetNext(), fin));
+    return inicio;
+}
+
+nodo* List::particionar(nodo* inicio, nodo* fin) {
+
+    //este metodo toma el nodo de inicio, y un nodo de fin, ademas que los organiza en funcion al pivote
+    int valorPivote = inicio->GetValue();
+    nodo* menor = inicio;
+    nodo* current = inicio->GetNext();
+
+
+
+    //Hacemos un reordamiento de nodos a travez de un un ciclo, que recorre desde inicio hasta el fin comparando cada valor con el pivote, si el valor es menor que el pivote se intecambia con el valor menor
+    while (current != fin) {
+        if (current->GetValue() < valorPivote) {
+            menor = (menor == nullptr) ? inicio : menor->GetNext();
+
+            int temp = menor->GetValue();
+            menor->SetValue(current->GetValue());
+            current->SetValue(temp);
+        }
+        current = current->GetNext();
+    }
+
+    //Al final se intercambia el valor del nodo inicio con el valor del nodo que esta apuntado como menor y el  y el menor termina apuntando igual que el nodo temporal que creamos con la ubicacion de inicio, asi cambiando valores
+    int temp = inicio->GetValue();
+    inicio->SetValue(menor->GetValue());
+    menor->SetValue(temp);
+    return menor;
+    //el nodo menor lo retornamos como el nuevo pivote porque encontramos que esta en la posicion correcta
+}
+
+nodo* List::obtenerUltimoNodo(nodo* nodo) {
+    //con este recorremos toda la lista hata que lleguemos al ultimo noto que tendria el valor nullptr
+    while (nodo && nodo->GetNext() != nullptr) {
+        nodo = nodo->GetNext();
+    }
+    return nodo;
+}

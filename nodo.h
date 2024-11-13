@@ -17,6 +17,7 @@ public:
     void SetNextNodoCircular(nodo* _next);
     void SetPrevNodo(nodo* _prev);
     void ImprimirValor();
+    void SetNextNodoNull();
 private:
     int valor;
     nodo* nextNodo;
